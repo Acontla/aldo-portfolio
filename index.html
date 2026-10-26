@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldo Angel Ambriz Contla | Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Aplica el tema guardado antes de pintar (evita parpadeo) -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Fondo: orbes de color difuminados + grid -->
+    <div class="orb orb--orange" aria-hidden="true"></div>
+    <div class="orb orb--emerald" aria-hidden="true"></div>
+    <div class="orb orb--violet" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <!-- Navegacion -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">Aldo A. Ambriz Contla</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mi</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="CV.pdf" class="nav-link nav-cv" target="_blank">CV</a></li>
+                <li class="nav-theme">
+                    <button class="theme-switch" id="theme-switch" role="switch" aria-checked="false" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">
+                        <span class="theme-switch__thumb">
+                            <span class="theme-switch__icon theme-switch__icon--moon" aria-hidden="true">🌙</span>
+                            <span class="theme-switch__icon theme-switch__icon--sun" aria-hidden="true">☀️</span>
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero / Inicio -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting fade-in">Hola, soy</p>
+                <h1 class="hero-name fade-in">Aldo Angel<br>Ambriz Contla</h1>
+                <p class="hero-role fade-in">QA Engineer &amp; Desarrollador</p>
+                <p class="hero-description fade-in">
+                    Egresado de Matemáticas Aplicadas y Computación por la UNAM. Especializado en calidad de software,
+                    automatización de pruebas y desarrollo de soluciones tecnológicas. Disfruto convertir retos complejos en sistemas eficientes, automatizados y confiables,
+                    siempre buscando mejorar procesos y llevar la tecnología un paso más allá.
+                </p>
+                <div class="hero-buttons fade-in">
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contacto</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="image-a.jpg" alt="Foto de Aldo Ambriz">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mi -->
+    <section class="section" id="sobre-mi">
+        <div class="section-glow section-glow--purple" style="top: 10%; left: -5%;"></div>
+        <div class="container">
+            <h2 class="section-title fade-in">Sobre Mi</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>
+                        Soy un profesional en tecnologia con experiencia en QA, 
+                        automatizacion de pruebas y desarrollo de software. Me especializo 
+                        en crear soluciones robustas que garantizan la calidad y el 
+                        rendimiento de las aplicaciones.
+                    </p>
+                    <p>
+                        Trabajo con herramientas como Cypress, Python, Selenium y diversas 
+                        tecnologias de testing para asegurar que cada producto cumpla con 
+                        los mas altos estandares de calidad.
+                    </p>
+                </div>
+                <div class="skills fade-in">
+                    <h3>Habilidades</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">appium</span>
+                        <span class="skill-tag">Testing-mobile</span>
+                        <span class="skill-tag">Cypress</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">API Testing</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section section-alt" id="proyectos">
+        <div class="section-glow section-glow--pink" style="top: 30%; right: -5%;"></div>
+        <div class="container">
+            <h2 class="section-title fade-in">Proyectos</h2>
+
+            <!-- Aviso: trabajo en progreso -->
+            <div class="wip-banner fade-in" role="status">
+                <span class="wip-banner__icon" aria-hidden="true">⚠️</span>
+                <span>Sección en construcción — se sigue trabajando en documentar cada proyecto.</span>
+            </div>
+
+            <p class="projects-hint fade-in">Pasa el cursor sobre un proyecto para ver el detalle</p>
+
+            <!-- Explorador: lista (izq) + panel de detalle deslizante (der) -->
+            <div class="projects-explorer fade-in">
+
+                <!-- Lista de proyectos -->
+                <ul class="proj-list" id="proj-list">
+                    <li class="proj-item is-active" data-project="p1" tabindex="0">
+                        <span class="proj-item__badge">QA · API</span>
+                        <span class="proj-item__name">API Health Check Framework</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                    <li class="proj-item" data-project="p2" tabindex="0">
+                        <span class="proj-item__badge">E2E · Web</span>
+                        <span class="proj-item__name">Suite E2E con Cypress</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                    <li class="proj-item" data-project="p3" tabindex="0">
+                        <span class="proj-item__badge">Mobile · Auto</span>
+                        <span class="proj-item__name">Pruebas Mobile Automatizadas</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                    <li class="proj-item" data-project="p4" tabindex="0">
+                        <span class="proj-item__badge">QA · Manual</span>
+                        <span class="proj-item__name">Testing Manual &amp; Casos de Prueba</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                    <li class="proj-item" data-project="p5" tabindex="0">
+                        <span class="proj-item__badge">Automatización</span>
+                        <span class="proj-item__name">Fleet Manager Scripts</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                    <li class="proj-item" data-project="p6" tabindex="0">
+                        <span class="proj-item__badge">Análisis de Datos</span>
+                        <span class="proj-item__name">Análisis de Resultados QA</span>
+                        <span class="proj-item__arrow" aria-hidden="true">→</span>
+                    </li>
+                </ul>
+
+                <!-- Panel de detalle (barra lateral derecha) -->
+                <div class="proj-detail" id="proj-detail">
+                    <article class="proj-panel is-active" data-panel="p1">
+                        <span class="proj-panel__badge">QA · API</span>
+                        <h3 class="proj-panel__title">API Health Check Framework</h3>
+                        <p class="proj-panel__desc">Framework escalable en Python que monitorea la salud de 5 servicios y 61 endpoints, con auto-descubrimiento de IDs, ejecución concurrente y reportes en HTML, JSON y CSV.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>pytest</span><span>requests</span>
+                        </div>
+                    </article>
+                    <article class="proj-panel" data-panel="p2">
+                        <span class="proj-panel__badge">E2E · Web</span>
+                        <h3 class="proj-panel__title">Suite E2E con Cypress</h3>
+                        <p class="proj-panel__desc">Automatización end-to-end de flujos críticos: login, formularios y navegación, con comandos personalizados, fixtures y reportes de video para regresión continua.</p>
+                        <div class="project-tags">
+                            <span>Cypress</span><span>JavaScript</span><span>CI/CD</span>
+                        </div>
+                    </article>
+                    <article class="proj-panel" data-panel="p3">
+                        <span class="proj-panel__badge">Mobile · Auto</span>
+                        <h3 class="proj-panel__title">Pruebas Mobile Automatizadas</h3>
+                        <p class="proj-panel__desc">Automatización de flujos de la app móvil con Appium: login, navegación y funciones clave sobre iOS y Android, con localizadores robustos y validaciones de extremo a extremo.</p>
+                        <div class="project-tags">
+                            <span>Appium</span><span>Python</span><span>iOS/Android</span>
+                        </div>
+                    </article>
+                    <article class="proj-panel" data-panel="p4">
+                        <span class="proj-panel__badge">QA · Manual</span>
+                        <h3 class="proj-panel__title">Testing Manual &amp; Casos de Prueba</h3>
+                        <p class="proj-panel__desc">Diseño y ejecución de casos de prueba funcionales y exploratorios, reporte de bugs con evidencia, pruebas de regresión y validación cruzada en web y mobile.</p>
+                        <div class="project-tags">
+                            <span>Casos de prueba</span><span>Bug reporting</span><span>Exploratorio</span>
+                        </div>
+                    </article>
+                    <article class="proj-panel" data-panel="p5">
+                        <span class="proj-panel__badge">Automatización</span>
+                        <h3 class="proj-panel__title">Fleet Manager Scripts</h3>
+                        <p class="proj-panel__desc">Conjunto de scripts para automatizar la gestión de operadores, vehículos, marcas y líneas de negocio: generación y carga masiva de datos de prueba contra el sistema.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Selenium</span><span>RPA</span>
+                        </div>
+                    </article>
+                    <article class="proj-panel" data-panel="p6">
+                        <span class="proj-panel__badge">Análisis de Datos</span>
+                        <h3 class="proj-panel__title">Análisis de Resultados QA</h3>
+                        <p class="proj-panel__desc">Procesamiento de reportes de pruebas (tasas de éxito, tiempos de respuesta, códigos HTTP) con pandas para generar métricas, tendencias y visualizaciones que apoyan la toma de decisiones.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>pandas</span><span>Matplotlib</span>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+        <div class="section-glow section-glow--purple" style="bottom: 10%; right: 10%;"></div>
+        <div class="container">
+            <h2 class="section-title fade-in">Contacto</h2>
+            <div class="contact-content fade-in">
+                <p>Estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme.</p>
+                <p class="contact-email">O escríbeme directamente a <a href="mailto:contlaaldoangel@gmail.com">contlaaldoangel@gmail.com</a></p>
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgawzalo" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Aldo Angel Ambriz Contla. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Acontla" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/aldo-angel-ambriz-contla-bbab57268?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
